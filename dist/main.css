@@ -184,6 +184,134 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
 
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black; }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  margin-right: 4rem;
+  height: 40rem;
+  width: 18%; }
+  .feature-box:hover {
+    transform: translateY(-2rem) scale(1.05); }
+  .feature-box__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, skyblue, deepskyblue);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  width: 18%;
+  height: 50rem;
+  margin-right: 5rem;
+  display: flex; }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right, skyblue, deepskyblue), url(images/backimg3.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right, lightskyblue, #076eae), url(images/backimg4.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right, royalblue, #0c1b4a), url(images/backimg5.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 18rem;
+    right: 1rem;
+    text-align: right; }
+  .card__side {
+    color: white;
+    font-size: 3rem;
+    height: 50rem;
+    transition: all 0.5s ease-in;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 0.6rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+    .card__side--front {
+      background-color: azure;
+      color: black; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-color: deepskyblue; }
+      .card__side--back--2 {
+        background-color: lightskyblue; }
+      .card__side--back--3 {
+        background-color: royalblue; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 90%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid lightgrey; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(135, 206, 235, 0.85), rgba(0, 191, 255, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(135, 206, 250, 0.85), rgba(7, 110, 174, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(65, 105, 225, 0.85), rgba(12, 27, 74, 0.85)); }
+  .card__monthly-price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: white;
+    margin-bottom: 8rem; }
+  .card__price-small-text {
+    font-size: 1.4rem;
+    transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
 .header {
   height: 95vh;
   position: relative;
@@ -206,7 +334,21 @@ body {
     text-align: center; }
 
 .section-about {
+  transform: translateY(-10rem);
   padding: 15rem 0; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(0, 191, 255, 0.8), rgba(135, 206, 235, 0.8)), url(images/backimg2.jpg);
+  background-size: cover;
+  margin-top: 10rem;
+  transform: skewY(-7deg) translateY(-10rem); }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-club {
+  transform: translateY(-20rem);
+  padding: 20rem 0; }
 
 .container {
   color: black;
